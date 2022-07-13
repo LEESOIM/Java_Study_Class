@@ -12,7 +12,7 @@ public class Method1 {
 	
 	//접근지정자 : public
 	//그외지정자 : 생략 [대괄호 안은 옵션]
-	//리턴타입 : void
+	//리턴타입 : void(리턴할 게 없다)
 	//메서드명 : 개발자가 생성, 첫글자는 소문자로 시작
 	//매개변수 : 생략
 	public void test() {

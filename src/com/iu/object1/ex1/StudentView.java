@@ -3,7 +3,7 @@ package com.iu.object1.ex1;
 
 public class StudentView {
 	
-	//viewAll메서드
+	//viewAll 메서드
 	//학생들의 모든 정보를 받아서 출력
 	public void view(Student [] students) { //학생들의 정보를 배열로 받는다는 뜻
 		System.out.println("Name\tNum\t국어\t영어\t수학\tTotal\tAvg");

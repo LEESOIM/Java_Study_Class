@@ -11,7 +11,7 @@ public class Method2 {
 		String name = sc.next();
 		
 		Method1 mt = new Method1();
-		mt.test();
+		mt.test();//메서드호출
 		
 		System.out.println(name);
 	}

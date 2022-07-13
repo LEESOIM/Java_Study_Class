@@ -26,7 +26,7 @@ public class Object2Main4 {
 		
 		
 		Method4 mt4 = new Method4();
-		mt4.info(members);//메서드 호출
+		mt4.info(members);//members에 들어있는 주소를 info에 보낸다
 		
 		System.out.println(members.length);//기존에 있는 배열 값이 출력
 		

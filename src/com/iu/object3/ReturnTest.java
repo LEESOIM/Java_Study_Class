@@ -1,7 +1,6 @@
 package com.iu.object3;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class ReturnTest {
 	
@@ -16,10 +15,10 @@ public class ReturnTest {
 		Random random = new Random();
 		int num = random.nextInt(50);
 		
-		//return 리턴하려는 Data
+		//return 리턴하려는Data;
 		return num; //리턴하는 데이터는 1개만 가능
 	}
-	
+
 	
 	
 	
@@ -40,8 +39,7 @@ public class ReturnTest {
 	
 	//title, host, 통장번호, 잔액 입력받아서 리턴
 	public Account makeAccount() { //리턴하려고 하는 데이터타입을 써야한다
-		Scanner sc = new Scanner(System.in);
-		Account account = new Account(); //타입이 달라서 배열 X -> 클래스
+		Account account = new Account(); //타입이 달라서 배열 X -> 클래스 만들어서 가져온다
 		account.title = "자유입출금";
 		account.host = "이소임";
 		account.numbers = "123456-789456";

@@ -11,12 +11,13 @@ public class StudentService {
 	//학생수를 입력 받고
 	//학생수만큼 정보를 입력 받고
 	//학생들을 리턴
-	public Student [] makeStudents() { //학생들을 모아놓은 배열로 리턴하라
+	public Student [] makeStudents() { //리턴하려고 하는 데이터타입을 써야한다
+										//학생들을 모아놓은 배열로 리턴하라
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("학생수 입력");
 		int count = sc.nextInt();
-		Student [] students = new Student[count]; //학생 한명의 정보를 배열에 만들어라
+		Student [] students = new Student[count]; //학생 한명 한명의 정보를 담을 배열 생성
 		
 		for(int i=0;i<students.length;i++) {
 			

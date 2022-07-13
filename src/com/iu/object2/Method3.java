@@ -7,7 +7,7 @@ public class Method3 {
 		System.out.println("월급 계산");
 		System.out.println(salary*0.967); //호출 끝
 		
-		salary=20; //20은 호출이 끝나면 같이 사라짐(스택에 있는 지역변수)
+		salary=20; //출력문 없이 호출 끝났기 때문에 반영 안됨(사라짐)
 	}
 	
 	
@@ -35,7 +35,7 @@ public class Method3 {
 		System.out.println("이메일 : "+member.email);
 		System.out.println("번호 : "+member.phone);
 		
-		member.age=100; //같은 주소의 힙에 있는 멤버변수
-		
+		member.age=100; //출력문 없이 호출 끝났기 때문에 반영 안됨(사라짐)
+						//BUT, member 주소의 힙에 100을 담고 사라짐
 	}
 }

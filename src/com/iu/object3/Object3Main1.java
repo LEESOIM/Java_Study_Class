@@ -15,7 +15,7 @@ public class Object3Main1 {
 		System.out.println("-----------------");
 		
 		
-		int [] nums =  rt.makeRandom2(10);
+		int [] nums =  rt.makeRandom2(5);
 		for(int i=0;i<nums.length;i++) {
 			System.out.println(nums[i]);
 		}

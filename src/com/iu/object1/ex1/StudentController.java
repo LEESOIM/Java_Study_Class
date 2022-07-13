@@ -24,22 +24,20 @@ public class StudentController {
 			
 			//객체 생성 
 			//클래스명 참조변수명 = new 생성자();
-			Scanner sc = new Scanner(System.in);
 			StudentService ss = new StudentService();
 			StudentView sv = new StudentView();
-			
-			
+			Scanner sc = new Scanner(System.in);
 			int select = sc.nextInt();
 			
 				if(select==1) {
 					
 					System.out.println(">>학생 정보 입력");
-					students = ss.makeStudents();
+					students = ss.makeStudents(); //멤버메서드 : 참조변수명.멤버메서드명()
 
 				} else if(select==2) {
 					
 					System.out.println(">>학생 정보 조회");
-					sv.view(students); //멤버메서드 : 참조변수명.멤버메서드명()
+					sv.view(students); //(인자값) : 메서드를 호출할때 매개변수에 보내는 실제 값(매개변수에 대입하는 값)
 					
 				} else if(select==3) {
 					System.out.println(">>학생 정보 검색");

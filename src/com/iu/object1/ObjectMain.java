@@ -18,7 +18,7 @@ public class ObjectMain {
 		System.out.println("프로그램 시작");
 		//Object(객체) 생성
 		//클래스명(대문자) 참조변수명(소문자) = new 클래스명(); -> new:힙에 새로 만들어라
-		//데이터타입 변수명
+		//=데이터타입 변수명
 		Monster monster = new Monster(); //Monster -> int,long과 같은 사용자가 만든 데이터타입
 										//class의 역할 : 데이터를 담아서 운반
 		System.out.println(monster); //힙 영역에 담겨진 실제 데이터의 스택 메모리 주소값
@@ -54,8 +54,7 @@ public class ObjectMain {
 		
 		monster.weapon = sword; 
 //		monster.weapon = sword.name; //같은 타입(Weapon타입=!String타입)끼리 담을수있다
-		//weapon : 멤버변수 
-		//sword : 참조변수
+
 		
 		//몬스터가 들고 있는 단검의 이름
 		System.out.println(monster.weapon.name);
