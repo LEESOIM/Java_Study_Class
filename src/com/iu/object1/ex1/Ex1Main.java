@@ -21,17 +21,18 @@ public class Ex1Main {
 		
 		Scanner sc = new Scanner(System.in);
 		Student [] students = new Student[3];
-		Student st = null;
+		Student st = null; //st는 Student 타입
 		for(int i=0;i<3;i++) {
-			st = new Student(); //st는 Student 타입
+			st = new Student(); //객체 3개 만들어짐
 			System.out.println("이름 입력");
 			st.name=sc.next(); //name은 String 타입
-			students[i]=st; //Student 타입을 넣는다
+			students[i]=st; //같은 Student 타입을 넣는다
 		}
 		
 		for(int i=0;i<students.length;i++) {
 			System.out.println(students[i].name);
 		}
+		
 		System.out.println(st.name);
 	}
 

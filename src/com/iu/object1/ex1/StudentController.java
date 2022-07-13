@@ -7,8 +7,6 @@ public class StudentController {
 	//start 메서드 선언
 	public void start() {
 		
-		Scanner sc = new Scanner(System.in);
-		
 		boolean check=true;
 		while(check) {
 			
@@ -19,8 +17,8 @@ public class StudentController {
 			System.out.println("5.학생 정보 추가");
 			System.out.println("6.프로그램 종료");
 			
-			int select=0;
-			select = sc.nextInt();
+			Scanner sc = new Scanner(System.in);
+			int select = sc.nextInt();
 			
 				if(select==1) {
 					System.out.println("1.학생 정보 입력");

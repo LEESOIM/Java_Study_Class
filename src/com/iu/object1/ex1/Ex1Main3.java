@@ -10,9 +10,9 @@ public class Ex1Main3 {
 		
 		for(int i=0;i<students.length;i++) {
 			Student st = new Student(); //객체 3개 만들어짐
-			students[i]=st;
+			students[i]=st; //주소를 먼저 담는다
 			System.out.println("이름 입력");
-//			students[i].name=sc.next(); //abc
+//			students[i].name=sc.next(); //abc : 같은주소를 가지기 때문에
 			st.name=sc.next(); //abc
 		}
 		

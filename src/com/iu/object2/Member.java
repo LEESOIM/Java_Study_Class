@@ -2,7 +2,7 @@ package com.iu.object2;
 
 public class Member {
 
-	String naem;
+	String name;
 	int age;
 	String email;
 	String phone;

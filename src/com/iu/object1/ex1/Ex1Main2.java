@@ -14,12 +14,12 @@ public class Ex1Main2 {
 		for(int i=0;i<students.length;i++) {
 			System.out.println("이름 입력");
 			st.name=sc.next();
-			students[i]=st;
+			students[i]=st; //같은 Student 타입을 넣는다
 		}
 		
 		for(int i=0;i<students.length;i++) {
 			System.out.println(students[i].name);
-		}
+		} //하나의 데이터만 담을 수 있다
 		
 		System.out.println("프로그램 종료");
 	}
