@@ -11,7 +11,7 @@ public class StudentController {
 		
 		Student [] students = null;
 		Student student = null;
-		boolean check=true;
+		boolean check = true;
 		
 		while(check) {
 			
@@ -32,7 +32,7 @@ public class StudentController {
 				if(select==1) {
 					
 					System.out.println(">>학생 정보 입력");
-					students = ss.makeStudents(); //멤버메서드 : 참조변수명.멤버메서드명()
+					students = ss.makeStudents(); //멤버메서드 호출 : 참조변수명.멤버메서드명()
 
 				} else if(select==2) {
 					
@@ -42,9 +42,9 @@ public class StudentController {
 				} else if(select==3) {
 					System.out.println(">>학생 정보 검색");
 					
-					student = ss.findStudent(students);
+					student = ss.findStudent(students);//students에 들어있는 배열을 보내라
 					if(student!=null) {
-						sv.view(student);
+						sv.view(student);//student에 들어있는 값을 보내라
 					}else {
 						sv.view("학생 정보 없음");
 					}

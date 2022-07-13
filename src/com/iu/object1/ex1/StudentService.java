@@ -55,21 +55,14 @@ public class StudentService {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("학생 번호 입력");
 		int num = sc.nextInt();
-//		boolean flag=true;
 		Student student=null; //리턴하려는 학생
 		
 		for(int i=0;i<students.length;i++) {
 			if(students[i].num==num) {
 				student=students[i];
 				return student;
-//				break;
-//				flag=!flag;
 			}
 		}
-//		if(flag) {
-//			Student null;
-//		}
-		
-		return student;
+		return student; //null
 	}
 }
