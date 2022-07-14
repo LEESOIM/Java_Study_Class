@@ -5,12 +5,25 @@ import java.util.Scanner;
 import com.iu.object3.Account;
 
 public class StudentController {
-
+	
+	Scanner sc;
+	//객체 생성 
+	//클래스명 참조변수명 = new 생성자();
+	StudentService ss;
+	StudentView sv;
+	Student [] students;
+	Student student;
+	
+	public StudentController() {
+		sc = new Scanner(System.in);
+		ss = new StudentService();
+		sv = new StudentView();
+	}
+	
+	
 	//start 메서드 선언
 	public void start() {
 		
-		Student [] students = null;
-		Student student = null;
 		boolean check = true;
 		
 		while(check) {
@@ -21,12 +34,7 @@ public class StudentController {
 			System.out.println("4.학생 정보 삭제");
 			System.out.println("5.학생 정보 추가");
 			System.out.println("6.프로그램 종료");
-			
-			//객체 생성 
-			//클래스명 참조변수명 = new 생성자();
-			StudentService ss = new StudentService();
-			StudentView sv = new StudentView();
-			Scanner sc = new Scanner(System.in);
+				
 			int select = sc.nextInt();
 			
 				if(select==1) {
@@ -52,7 +60,10 @@ public class StudentController {
 				} else if(select==4) {
 					System.out.println(">>학생 정보 삭제");
 				} else if(select==5) {
+					
 					System.out.println(">>학생 정보 추가");
+					students = ss.addStudent(students);
+					
 				} else {
 					System.out.println(">>프로그램 종료");
 					break;
