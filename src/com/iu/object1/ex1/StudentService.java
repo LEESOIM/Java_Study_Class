@@ -134,6 +134,7 @@ public class StudentService {
 					continue;
 				}
 				stuCopys[index]=students[j];
+				index++;
 			}
 			
 			students = stuCopys;
