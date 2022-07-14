@@ -2,10 +2,6 @@ package com.iu.object1.ex1;
 
 import java.util.Scanner;
 
-import javax.security.auth.Subject;
-
-import com.iu.object3.Account;
-
 public class StudentService {
 	
 	Scanner sc;
@@ -17,8 +13,7 @@ public class StudentService {
 	//학생수를 입력 받고
 	//학생수만큼 정보를 입력 받고
 	//학생들을 리턴
-	public Student [] makeStudents() { //리턴하려고 하는 데이터타입을 써야한다
-										//학생들을 모아놓은 배열로 리턴하라
+	public Student [] makeStudents() { //리턴하려고 하는 데이터타입을 써야한다 -> 학생들을 모아놓은 배열로 리턴하라
 		
 		System.out.println("학생수 입력");
 		int count = sc.nextInt();
@@ -61,7 +56,7 @@ public class StudentService {
 
 		System.out.println("학생 번호 입력");
 		int num = sc.nextInt();
-		Student student=null; //리턴하려는 학생
+		Student student=null; //리턴하려는 기본값
 		
 		for(int i=0;i<students.length;i++) {
 			if(students[i].getNum()==num) {
@@ -100,7 +95,7 @@ public class StudentService {
 		student.setMath(sc.nextInt());
 		student.setTotal();
 		
-		stuCopys[students.length]=student;
+		stuCopys[students.length]=student; //students의 배열길이는 copys의 마지막 인덱스 번호와 같다
 		students=stuCopys;
 		
 		return students;
@@ -117,11 +112,11 @@ public class StudentService {
 	public Student [] removeStudent(Student [] students) {
 		
 		System.out.println("삭제할 학생 번호");
-		int select = sc.nextInt();
+		int num = sc.nextInt();
 		boolean flag=false;
 		int i=0;
 		for(i=0; i<students.length;i++) {
-			if(students[i].getNum()==select) {
+			if(students[i].getNum()==num) {
 				flag=!flag;
 				break;
 			}
@@ -131,7 +126,7 @@ public class StudentService {
 			int index=0;
 			for(int j=0;j<students.length;j++) {
 				if(j==i) {
-					continue;
+					continue; //조건식을 실행하지 말고 바로 증감식으로 넘어가라
 				}
 				stuCopys[index]=students[j];
 				index++;

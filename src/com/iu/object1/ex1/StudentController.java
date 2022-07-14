@@ -2,13 +2,11 @@ package com.iu.object1.ex1;
 
 import java.util.Scanner;
 
-import com.iu.object3.Account;
-
 public class StudentController {
 	
-	Scanner sc;
 	//객체 생성 
 	//클래스명 참조변수명 = new 생성자();
+	Scanner sc;
 	StudentService ss;
 	StudentView sv;
 	Student [] students;
@@ -61,11 +59,13 @@ public class StudentController {
 					
 					System.out.println(">>학생 정보 삭제");
 					students = ss.removeStudent(students);
+					sv.view("삭제 하였습니다");
 					
 				} else if(select==5) {
 					
 					System.out.println(">>학생 정보 추가");
 					students = ss.addStudent(students);
+					sv.view("추가 하였습니다");
 					
 				} else {
 					System.out.println(">>프로그램 종료");

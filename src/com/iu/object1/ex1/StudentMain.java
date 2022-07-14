@@ -8,7 +8,7 @@ public class StudentMain {
 		StudentController stu = new StudentController();
 		
 		//StudentController의 start 메서드 호출
-		stu.start();
+		stu.start();  
 		
 	}
 
