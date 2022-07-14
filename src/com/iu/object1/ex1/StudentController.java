@@ -12,7 +12,6 @@ public class StudentController {
 	StudentService ss;
 	StudentView sv;
 	Student [] students;
-	Student student;
 	
 	public StudentController() {
 		sc = new Scanner(System.in);
@@ -50,6 +49,7 @@ public class StudentController {
 				} else if(select==3) {
 					System.out.println(">>학생 정보 검색");
 					
+					Student student = new Student();
 					student = ss.findStudent(students);//students에 들어있는 배열을 보내라
 					if(student!=null) {
 						sv.view(student);//student에 들어있는 값을 보내라
@@ -58,7 +58,10 @@ public class StudentController {
 					}
 					
 				} else if(select==4) {
+					
 					System.out.println(">>학생 정보 삭제");
+					students = ss.removeStudent(students);
+					
 				} else if(select==5) {
 					
 					System.out.println(">>학생 정보 추가");

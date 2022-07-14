@@ -8,7 +8,7 @@ public class StudentView {
 	public void view(Student [] students) { //학생들의 정보를 배열로 받는다는 뜻
 		System.out.println("Name\tNum\t국어\t영어\t수학\tTotal\tAvg");
 		for(int i=0;i<students.length;i++) {
-			System.out.println(students[i].name+"\t"+students[i].num+"\t"+students[i].kor+"\t"+students[i].eng+"\t"+students[i].math+"\t"+students[i].total+"\t"+students[i].avg);
+			System.out.println(students[i].getName()+"\t"+students[i].getNum()+"\t"+students[i].getKor()+"\t"+students[i].getEng()+"\t"+students[i].getMath()+"\t"+students[i].getTotal()+"\t"+students[i].getAvg());
 			
 		}
 	}
@@ -26,7 +26,7 @@ public class StudentView {
 	//학생 한명의 정보를 받아서 모든 정보 출력
 	public void view(Student student) {
 		System.out.println("Name\tNum\t국어\t영어\t수학\tTotal\tAvg");
-		System.out.println(student.name+"\t"+student.num+"\t"+student.kor+"\t"+student.eng+"\t"+student.math+"\t"+student.total+"\t"+student.avg);
+		System.out.println(student.getName()+"\t"+student.getNum()+"\t"+student.getKor()+"\t"+student.getEng()+"\t"+student.getMath()+"\t"+student.getTotal()+"\t"+student.getAvg());
 	}
 		
 }

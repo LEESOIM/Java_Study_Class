@@ -2,7 +2,7 @@ package com.iu.object4;
 
 public class Car {
 	
-	String company="쌍용";
+	static String company="쌍용"; //한번 선언한걸 바꿀 필요가 없을때 static 사용
 	String brand;
 	String color;
 	boolean gear; //true 오토, false 수동
@@ -30,6 +30,11 @@ public class Car {
 //		this.color=color;
 //		this.gear=true;
 	}
+	
+	
+	//갈색:지역변수명
+	//파랑:멤버변수명
+	//지역변수와 멤버변수를 구분할때 멤버변수에 this를 쓴다
 	
 	public Car(String brand, String color) {
 		this.company="현대";

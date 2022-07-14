@@ -26,15 +26,15 @@ public class Ex1Main {
 		for(int i=0;i<3;i++) {
 			st = new Student(); //Student 객체 3개 만들어짐!!
 			System.out.println("이름 입력");
-			st.name=sc.next(); //name은 String 타입
+			st.setName(sc.next());//name은 String 타입
 			students[i]=st; //같은 Student 타입을 넣는다
 		}
 		
 		for(int i=0;i<students.length;i++) {
-			System.out.println(students[i].name);
+			System.out.println(students[i].getName());
 		}
 		
-		System.out.println(st.name); //마지막에 담긴 값 -> 주소가 다른 3개의 값을 하나의 스택에 담기 때문
+		System.out.println(st.getName()); //마지막에 담긴 값 -> 주소가 다른 3개의 값을 하나의 스택에 담기 때문
 	}
 
 }

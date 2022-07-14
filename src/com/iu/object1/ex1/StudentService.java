@@ -29,15 +29,15 @@ public class StudentService {
 			Student student = new Student(); //학생정보 객체생성
 			
 			System.out.println(i+1+"번째 학생 이름 입력");
-			student.name=sc.next();
+			student.setName(sc.next());
 			System.out.println(i+1+"번째 학생 번호 입력");
-			student.num=sc.nextInt();
+			student.setNum(sc.nextInt());
 			System.out.println(i+1+"번째 학생 국어 점수");
-			student.kor=sc.nextInt();
+			student.setKor(sc.nextInt());
 			System.out.println(i+1+"번째 학생 영어 점수");
-			student.eng=sc.nextInt();
+			student.setEng(sc.nextInt());
 			System.out.println(i+1+"번째 학생 수학 점수");
-			student.math=sc.nextInt();
+			student.setMath(sc.nextInt());
 			
 //			student.total=student.kor+student.eng+student.math;
 //			student.avg=student.total/3;
@@ -64,7 +64,7 @@ public class StudentService {
 		Student student=null; //리턴하려는 학생
 		
 		for(int i=0;i<students.length;i++) {
-			if(students[i].num==num) {
+			if(students[i].getNum()==num) {
 				student=students[i];
 				return student;
 			}
@@ -89,15 +89,15 @@ public class StudentService {
 		Student student = new Student(); //학생정보 객체생성
 		
 		System.out.println("추가 학생 이름 입력");
-		student.name=sc.next();
+		student.setName(sc.next());
 		System.out.println("추가 학생 번호 입력");
-		student.num=sc.nextInt();
+		student.setNum(sc.nextInt());
 		System.out.println("추가 학생 국어 점수");
-		student.kor=sc.nextInt();
+		student.setKor(sc.nextInt());
 		System.out.println("추가 학생 영어 점수");
-		student.eng=sc.nextInt();
+		student.setEng(sc.nextInt());
 		System.out.println("추가 학생 수학 점수");
-		student.math=sc.nextInt();
+		student.setMath(sc.nextInt());
 		student.setTotal();
 		
 		stuCopys[students.length]=student;
@@ -105,6 +105,40 @@ public class StudentService {
 		
 		return students;
 		
+	}
+	
+	
+	
+	//removeStudent
+	//학생들의 정보를 받아서
+	//삭제하려는 학생의 번호를 입력받음
+	//번호와 일치하는 학생을 삭제
+	//남은 학생정보들을 리턴
+	public Student [] removeStudent(Student [] students) {
+		
+		System.out.println("삭제할 학생 번호");
+		int select = sc.nextInt();
+		boolean flag=false;
+		int i=0;
+		for(i=0; i<students.length;i++) {
+			if(students[i].getNum()==select) {
+				flag=!flag;
+				break;
+			}
+		}if(flag) {
+			Student [] stuCopys = new Student[students.length-1];
+			
+			int index=0;
+			for(int j=0;j<students.length;j++) {
+				if(j==i) {
+					continue;
+				}
+				stuCopys[index]=students[j];
+			}
+			
+			students = stuCopys;
+		}
+		return students;
 	}
 	
 }
